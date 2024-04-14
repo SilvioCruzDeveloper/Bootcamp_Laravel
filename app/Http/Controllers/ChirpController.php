@@ -4,12 +4,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Response;
+
 use App\Models\Chirp;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Http\Response;
 
 class ChirpController extends Controller
 {
@@ -37,7 +38,7 @@ class ChirpController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        //
+
         $validated = $request->validate([
             'message' => 'required|string|max:255',
         ]);
